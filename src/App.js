@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import { Form, FormGroup, Label, Input, Button, Container } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import Navb from './nav';
+import Gallery from './gallery';
+import About from './about us';
+import Comp from './components';
+import FooterPage from './footer';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 class Home extends React.Component {
   state = {
@@ -71,6 +80,21 @@ class Home extends React.Component {
     return (
       <>
         <Navb />
+        <Router>
+               {/* A <Switch> looks through its children <Route>s and
+        renders the first one that matches the current URL. */}
+        <Switch>
+        <Route path="/gallery">
+          <Gallery />
+        </Route>
+        <Route path="/about us">
+          <About />
+        </Route>
+        <Route path="/components">
+          <Comp />
+        </Route>                    
+      </Switch>
+    </Router>
         <div style={{ "margin": "auto", "width": "50%" }}>
           <Form>
             <FormGroup>
@@ -95,8 +119,9 @@ class Home extends React.Component {
             <div>{this.state.result}</div>
           </Form>
         </div>
+        <FooterPage/>
       </>
-    );
+         );
   }
 }
 export default Home;

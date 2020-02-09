@@ -8,8 +8,8 @@ const Navb = (props) => {
 
   return (
     <div>
-      <Navbar color="faded" light>
-        <NavbarBrand href="/" className="mr-auto">Arithmetic Operations</NavbarBrand>
+      <Navbar color="green" light>
+        <NavbarBrand href="/" className="mr-auto">ARITHMETIC OPERATIONS</NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
@@ -18,6 +18,7 @@ const Navb = (props) => {
             </NavItem>
             <NavItem>
               <NavLink href="/gallery/">Gallery</NavLink>
+              
             </NavItem>
             <NavItem>
               <NavLink href="/components/">Components</NavLink>
